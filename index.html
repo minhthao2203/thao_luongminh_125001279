@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KickOff Arena - Cổng thông tin bóng đá đỉnh cao, cập nhật lịch thi đấu, hồ sơ cầu thủ và phân tích dự đoán kết quả AI chính xác.">
+    <title>KickOff Arena | Tin Tức, Cầu Thủ & Dự Đoán Trận Đấu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Animate.css (Yêu cầu đề bài) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS (Animate On Scroll) CSS (Yêu cầu đề bài) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- Custom CSS -->
+    <!-- Custom CSS (Hỗ trợ tải style.css ở cả thư mục gốc và thư mục css/) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== 1. HEADER (Chuẩn Semantic HTML5) ==================== -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo animate__animated animate__fadeInLeft" aria-label="KickOff Arena Trang chủ">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-futbol"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">KICKOFF</span>
+                    <span class="brand-sub">ARENA</span>
+                </div>
+            </a>
+
+            <!-- ==================== 2. NAV (Chuẩn Semantic HTML5) ==================== -->
+            <nav class="main-nav" id="mainNav" aria-label="Thanh điều hướng chính">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                    <li class="nav-item"><a href="#matches" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Lịch Thi Đấu</a></li>
+                    <li class="nav-item"><a href="#predictions" class="nav-link"><i class="fa-solid fa-chart-pie"></i> Dự Đoán Tỉ Lệ %</a></li>
+                    <li class="nav-item"><a href="#players" class="nav-link"><i class="fa-solid fa-users"></i> Ngôi Sao Cầu Thủ</a></li>
+                    <li class="nav-item"><a href="#news" class="nav-link"><i class="fa-solid fa-newspaper"></i> Điểm Tin</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions animate__animated animate__fadeInRight">
+                <!-- Nút Mở Bảng Màu Giao Diện (Theme Color Switcher) -->
+                <button class="palette-toggle-btn" id="paletteToggle" aria-label="Mở bảng màu giao diện" title="Đổi màu trang web">
+                    <i class="fa-solid fa-palette"></i>
+                    <span class="palette-btn-text">Bảng Màu</span>
+                </button>
+                <div class="live-pill">
+                    <span class="live-indicator"></span>
+                    <span class="live-text">LIVE MATCHES</span>
+                </div>
+                <a href="#predictions" class="btn btn-sm btn-primary header-cta">
+                    <i class="fa-solid fa-bolt"></i> Dự Đoán Ngay
+                </a>
+                <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Mở menu điều hướng">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 3. MAIN (Chuẩn Semantic HTML5) ==================== -->
+    <main id="main-content">
+
+        <!-- ==================== HERO SECTION (Animate.css & Call to Action) ==================== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-particles" aria-hidden="true"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate__animated animate__fadeInDown">
+                        <i class="fa-solid fa-trophy"></i> UEFA Champions League 2026 • Đại Chiến Đỉnh Cao
+                    </div>
+                    <h1 class="hero-title animate__animated animate__fadeInUp animate__delay-1s">
+                        KỶ NGUYÊN BÓNG ĐÁ SỐ & <span class="highlight-text">DỰ ĐOÁN SIÊU CHUẨN XÁC</span>
+                    </h1>
+                    <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
+                        Cập nhật phân tích dữ liệu chuyên sâu, lịch thi đấu trực tiếp cùng mô hình trí tuệ nhân tạo dự báo tỉ lệ % thắng hòa thua cho từng trận cầu nảy lửa trên thế giới.
+                    </p>
+                    <div class="hero-buttons animate__animated animate__zoomIn animate__delay-2s">
+                        <a href="#matches" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-ticket"></i> Khám Phá Trận Đấu
+                        </a>
+                        <a href="#predictions" class="btn btn-glass">
+                            <i class="fa-solid fa-chart-line"></i> Xem Tỉ Lệ Dự Đoán
+                        </a>
+                    </div>
+
+                    <!-- Highlight Match Countdown Bar -->
+                    <div class="hero-spotlight animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="spotlight-header">
+                            <span class="spotlight-tag"><i class="fa-solid fa-fire"></i> TRẬN CẦU TÂM ĐIỂM</span>
+                            <span class="spotlight-time"><i class="fa-regular fa-clock"></i> 02:00 • 22/10/2026</span>
+                        </div>
+                        <div class="spotlight-teams">
+                            <div class="spotlight-team">
+                                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=120&auto=format&fit=crop&q=80" alt="Real Madrid" class="team-emblem">
+                                <span class="team-name">Real Madrid</span>
+                            </div>
+                            <div class="spotlight-vs">
+                                <span class="vs-text">VS</span>
+                                <div class="countdown-badge" id="heroCountdown">
+                                    <span class="cd-item"><b id="cdHours">36</b>h</span> : 
+                                    <span class="cd-item"><b id="cdMins">12</b>m</span> : 
+                                    <span class="cd-item"><b id="cdSecs">45</b>s</span>
+                                </div>
+                            </div>
+                            <div class="spotlight-team">
+                                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=120&auto=format&fit=crop&q=80" alt="Manchester City" class="team-emblem">
+                                <span class="team-name">Manchester City</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar Counter -->
+        <section class="quick-stats-strip" data-aos="fade-up">
+            <div class="container strip-grid">
+                <div class="strip-card">
+                    <div class="strip-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="strip-info">
+                        <h4 class="strip-number">500+</h4>
+                        <p class="strip-label">Câu Lạc Bộ Hàng Đầu</p>
+                    </div>
+                </div>
+                <div class="strip-card">
+                    <div class="strip-icon"><i class="fa-solid fa-person-running"></i></div>
+                    <div class="strip-info">
+                        <h4 class="strip-number">12,500+</h4>
+                        <p class="strip-label">Hồ Sơ Cầu Thủ Chi Tiết</p>
+                    </div>
+                </div>
+                <div class="strip-card">
+                    <div class="strip-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="strip-info">
+                        <h4 class="strip-number">88.6%</h4>
+                        <p class="strip-label">Độ Chính Xác Dự Đoán AI</p>
+                    </div>
+                </div>
+                <div class="strip-card">
+                    <div class="strip-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
+                    <div class="strip-info">
+                        <h4 class="strip-number">Real-Time</h4>
+                        <p class="strip-label">Cập Nhật Trận Đấu 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. SECTION: UPCOMING MATCHES (Lịch Thi Đấu) ==================== -->
+        <section class="section-padding matches-section" id="matches">
+            <div class="container">
+                <div class="section-heading text-center" data-aos="fade-down">
+                    <span class="sub-badge"><i class="fa-solid fa-calendar-check"></i> THỜI GIAN THI ĐẤU</span>
+                    <h2 class="section-title">Các Trận Cầu Sắp Diễn Ra</h2>
+                    <p class="section-subtitle">Lịch thi đấu cập nhật từng giây từ các giải vô địch danh giá nhất thế giới</p>
+                    <div class="league-tabs">
+                        <button class="tab-btn active" data-league="all"><i class="fa-solid fa-globe"></i> Tất Cả</button>
+                        <button class="tab-btn" data-league="ucl"><i class="fa-solid fa-star"></i> Champions League</button>
+                        <button class="tab-btn" data-league="epl"><i class="fa-solid fa-crown"></i> Ngoại Hạng Anh</button>
+                        <button class="tab-btn" data-league="laliga"><i class="fa-solid fa-flag"></i> La Liga</button>
+                        <button class="tab-btn" data-league="vleague"><i class="fa-solid fa-futbol"></i> V-League</button>
+                    </div>
+                </div>
+
+                <div class="matches-grid" id="matchesContainer">
+                    <!-- Match Card 1 -->
+                    <article class="match-card" data-league="ucl" data-aos="fade-up" data-aos-delay="100">
+                        <div class="match-header">
+                            <span class="league-tag"><i class="fa-solid fa-star"></i> Champions League</span>
+                            <time class="match-time" datetime="2026-10-22T02:00:00"><i class="fa-regular fa-clock"></i> 02:00 - 22/10</time>
+                        </div>
+                        <div class="match-body">
+                            <div class="team team-home">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=100&auto=format&fit=crop&q=80" alt="Real Madrid" class="team-img">
+                                </div>
+                                <h3 class="team-title">Real Madrid</h3>
+                                <span class="team-form">W-W-D-W</span>
+                            </div>
+                            <div class="match-center-info">
+                                <span class="stadium-badge"><i class="fa-solid fa-location-dot"></i> Bernabéu</span>
+                                <div class="vs-circle">VS</div>
+                                <span class="match-status-tag upcoming">Sắp Bắt Đầu</span>
+                            </div>
+                            <div class="team team-away">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=100&auto=format&fit=crop&q=80" alt="Man City" class="team-img">
+                                </div>
+                                <h3 class="team-title">Man City</h3>
+                                <span class="team-form">W-W-W-L</span>
+                            </div>
+                        </div>
+                        <!-- Tỉ lệ phần trăm xem nhanh -->
+                        <div class="mini-probability">
+                            <div class="prob-labels">
+                                <span>Thắng: <strong>48%</strong></span>
+                                <span>Hòa: <strong>24%</strong></span>
+                                <span>Thắng: <strong>28%</strong></span>
+                            </div>
+                            <div class="prob-bar-stacked">
+                                <div class="bar-segment home-prob" style="width: 48%;" title="Real Madrid: 48%"></div>
+                                <div class="bar-segment draw-prob" style="width: 24%;" title="Hòa: 24%"></div>
+                                <div class="bar-segment away-prob" style="width: 28%;" title="Man City: 28%"></div>
+                            </div>
+                        </div>
+                        <div class="match-footer">
+                            <a href="#predictions" class="btn btn-outline btn-full">
+                                <i class="fa-solid fa-chart-simple"></i> Phân Tích Kèo & Dự Đoán
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Match Card 2 -->
+                    <article class="match-card" data-league="epl" data-aos="fade-up" data-aos-delay="200">
+                        <div class="match-header">
+                            <span class="league-tag"><i class="fa-solid fa-crown"></i> Premier League</span>
+                            <time class="match-time" datetime="2026-10-23T22:30:00"><i class="fa-regular fa-clock"></i> 22:30 - 23/10</time>
+                        </div>
+                        <div class="match-body">
+                            <div class="team team-home">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=100&auto=format&fit=crop&q=80" alt="Arsenal" class="team-img">
+                                </div>
+                                <h3 class="team-title">Arsenal</h3>
+                                <span class="team-form">W-W-W-W</span>
+                            </div>
+                            <div class="match-center-info">
+                                <span class="stadium-badge"><i class="fa-solid fa-location-dot"></i> Emirates</span>
+                                <div class="vs-circle">VS</div>
+                                <span class="match-status-tag upcoming">Super Sunday</span>
+                            </div>
+                            <div class="team team-away">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=100&auto=format&fit=crop&q=80" alt="Chelsea" class="team-img">
+                                </div>
+                                <h3 class="team-title">Chelsea</h3>
+                                <span class="team-form">D-W-L-W</span>
+                            </div>
+                        </div>
+                        <div class="mini-probability">
+                            <div class="prob-labels">
+                                <span>Thắng: <strong>55%</strong></span>
+                                <span>Hòa: <strong>23%</strong></span>
+                                <span>Thắng: <strong>22%</strong></span>
+                            </div>
+                            <div class="prob-bar-stacked">
+                                <div class="bar-segment home-prob" style="width: 55%;" title="Arsenal: 55%"></div>
+                                <div class="bar-segment draw-prob" style="width: 23%;" title="Hòa: 23%"></div>
+                                <div class="bar-segment away-prob" style="width: 22%;" title="Chelsea: 22%"></div>
+                            </div>
+                        </div>
+                        <div class="match-footer">
+                            <a href="#predictions" class="btn btn-outline btn-full">
+                                <i class="fa-solid fa-chart-simple"></i> Phân Tích Kèo & Dự Đoán
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Match Card 3 -->
+                    <article class="match-card" data-league="laliga" data-aos="fade-up" data-aos-delay="300">
+                        <div class="match-header">
+                            <span class="league-tag"><i class="fa-solid fa-flag"></i> La Liga</span>
+                            <time class="match-time" datetime="2026-10-24T02:00:00"><i class="fa-regular fa-clock"></i> 02:00 - 24/10</time>
+                        </div>
+                        <div class="match-body">
+                            <div class="team team-home">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=100&auto=format&fit=crop&q=80" alt="Barcelona" class="team-img">
+                                </div>
+                                <h3 class="team-title">Barcelona</h3>
+                                <span class="team-form">W-W-W-D</span>
+                            </div>
+                            <div class="match-center-info">
+                                <span class="stadium-badge"><i class="fa-solid fa-location-dot"></i> Camp Nou</span>
+                                <div class="vs-circle">VS</div>
+                                <span class="match-status-tag upcoming">Đại Chiến</span>
+                            </div>
+                            <div class="team team-away">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=100&auto=format&fit=crop&q=80" alt="Atlético Madrid" class="team-img">
+                                </div>
+                                <h3 class="team-title">Atlético Madrid</h3>
+                                <span class="team-form">W-D-W-W</span>
+                            </div>
+                        </div>
+                        <div class="mini-probability">
+                            <div class="prob-labels">
+                                <span>Thắng: <strong>48%</strong></span>
+                                <span>Hòa: <strong>28%</strong></span>
+                                <span>Thắng: <strong>24%</strong></span>
+                            </div>
+                            <div class="prob-bar-stacked">
+                                <div class="bar-segment home-prob" style="width: 48%;" title="Barcelona: 48%"></div>
+                                <div class="bar-segment draw-prob" style="width: 28%;" title="Hòa: 28%"></div>
+                                <div class="bar-segment away-prob" style="width: 24%;" title="Atlético: 24%"></div>
+                            </div>
+                        </div>
+                        <div class="match-footer">
+                            <a href="#predictions" class="btn btn-outline btn-full">
+                                <i class="fa-solid fa-chart-simple"></i> Phân Tích Kèo & Dự Đoán
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Match Card 4 -->
+                    <article class="match-card" data-league="vleague" data-aos="fade-up" data-aos-delay="400">
+                        <div class="match-header">
+                            <span class="league-tag"><i class="fa-solid fa-futbol"></i> V-League 1</span>
+                            <time class="match-time" datetime="2026-10-25T19:15:00"><i class="fa-regular fa-clock"></i> 19:15 - 25/10</time>
+                        </div>
+                        <div class="match-body">
+                            <div class="team team-home">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=100&auto=format&fit=crop&q=80" alt="Hà Nội FC" class="team-img">
+                                </div>
+                                <h3 class="team-title">Hà Nội FC</h3>
+                                <span class="team-form">W-D-W-L</span>
+                            </div>
+                            <div class="match-center-info">
+                                <span class="stadium-badge"><i class="fa-solid fa-location-dot"></i> Hàng Đẫy</span>
+                                <div class="vs-circle">VS</div>
+                                <span class="match-status-tag upcoming">Derby Thủ Đô</span>
+                            </div>
+                            <div class="team team-away">
+                                <div class="team-logo-wrap">
+                                    <img src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?w=100&auto=format&fit=crop&q=80" alt="Thể Công Viettel" class="team-img">
+                                </div>
+                                <h3 class="team-title">Thể Công Viettel</h3>
+                                <span class="team-form">D-W-W-W</span>
+                            </div>
+                        </div>
+                        <div class="mini-probability">
+                            <div class="prob-labels">
+                                <span>Thắng: <strong>41%</strong></span>
+                                <span>Hòa: <strong>33%</strong></span>
+                                <span>Thắng: <strong>26%</strong></span>
+                            </div>
+                            <div class="prob-bar-stacked">
+                                <div class="bar-segment home-prob" style="width: 41%;" title="Hà Nội FC: 41%"></div>
+                                <div class="bar-segment draw-prob" style="width: 33%;" title="Hòa: 33%"></div>
+                                <div class="bar-segment away-prob" style="width: 26%;" title="Thể Công Viettel: 26%"></div>
+                            </div>
+                        </div>
+                        <div class="match-footer">
+                            <a href="#predictions" class="btn btn-outline btn-full">
+                                <i class="fa-solid fa-chart-simple"></i> Phân Tích Kèo & Dự Đoán
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. SECTION: DỰ ĐOÁN KẾT QUẢ THEO TỈ LỆ % ==================== -->
+        <section class="section-padding prediction-section" id="predictions">
+            <div class="container">
+                <div class="section-heading text-center" data-aos="zoom-in">
+                    <span class="sub-badge"><i class="fa-solid fa-microchip"></i> AI PREDICTION ENGINE</span>
+                    <h2 class="section-title">Dự Đoán Tỉ Lệ Phần Trăm Chiến Thắng</h2>
+                    <p class="section-subtitle">Thuật toán Machine Learning phân tích phong độ, chỉ số xG, lịch sử đối đầu và đội hình xuất phát</p>
+                </div>
+
+                <div class="prediction-featured-box" data-aos="fade-up">
+                    <div class="featured-pred-header">
+                        <div class="pred-meta">
+                            <span class="badge-gold"><i class="fa-solid fa-crown"></i> TRẬN ĐẤU ĐƯỢC QUAN TÂM NHẤT</span>
+                            <span class="pred-date"><i class="fa-regular fa-calendar"></i> 22/10/2026 - SVĐ Santiago Bernabéu</span>
+                        </div>
+                        <div class="confidence-badge">
+                            <i class="fa-solid fa-circle-check"></i> Độ tin cậy mô hình: <strong>92.4%</strong>
+                        </div>
+                    </div>
+
+                    <div class="pred-teams-showdown">
+                        <!-- Đội Nhà -->
+                        <div class="pred-team-side home">
+                            <div class="pred-team-avatar">
+                                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=160&auto=format&fit=crop&q=80" alt="Real Madrid">
+                            </div>
+                            <h3 class="pred-name">Real Madrid</h3>
+                            <div class="pred-stats-list">
+                                <span><i class="fa-solid fa-chart-line"></i> xG kỳ vọng: <strong>2.15</strong></span>
+                                <span><i class="fa-solid fa-shield"></i> Giữ sạch lưới: <strong>65%</strong></span>
+                                <span><i class="fa-solid fa-trophy"></i> Tỉ lệ thắng sân nhà: <strong>80%</strong></span>
+                            </div>
+                            <div class="pred-percent-display home-color">
+                                <span class="percent-num" id="predRealVal">48%</span>
+                                <span class="percent-label">Cơ hội chiến thắng</span>
+                            </div>
+                        </div>
+
+                        <!-- Trung tâm: Hòa & Biểu đồ -->
+                        <div class="pred-draw-center">
+                            <div class="draw-badge">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span class="draw-title">HÒA</span>
+                                <span class="draw-percent" id="predDrawVal">24%</span>
+                            </div>
+                            <div class="versus-divider">
+                                <span>Tỉ Lệ Đối Đầu</span>
+                            </div>
+                            <!-- Mini predictor calculator interactive -->
+                            <div class="user-vote-box">
+                                <p class="vote-title">Bạn dự đoán ai sẽ giành chiến thắng?</p>
+                                <div class="vote-buttons" id="votingBtns">
+                                    <button class="vote-btn" data-team="home">Real Madrid</button>
+                                    <button class="vote-btn" data-team="draw">Hòa</button>
+                                    <button class="vote-btn" data-team="away">Man City</button>
+                                </div>
+                                <span class="vote-feedback" id="voteFeedback">Đã có 14,892 lượt người hâm mộ tham gia bình chọn</span>
+                            </div>
+                        </div>
+
+                        <!-- Đội Khách -->
+                        <div class="pred-team-side away">
+                            <div class="pred-team-avatar">
+                                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=160&auto=format&fit=crop&q=80" alt="Manchester City">
+                            </div>
+                            <h3 class="pred-name">Manchester City</h3>
+                            <div class="pred-stats-list">
+                                <span><i class="fa-solid fa-chart-line"></i> xG kỳ vọng: <strong>1.82</strong></span>
+                                <span><i class="fa-solid fa-shield"></i> Giữ sạch lưới: <strong>55%</strong></span>
+                                <span><i class="fa-solid fa-trophy"></i> Tỉ lệ thắng sân khách: <strong>68%</strong></span>
+                            </div>
+                            <div class="pred-percent-display away-color">
+                                <span class="percent-num" id="predCityVal">28%</span>
+                                <span class="percent-label">Cơ hội chiến thắng</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thanh Phần Trăm Trực Quan Động -->
+                    <div class="probability-master-bar">
+                        <div class="master-bar-container">
+                            <div class="bar-fill bar-home" id="barHome" style="width: 48%;">
+                                <span>Real Madrid: 48%</span>
+                            </div>
+                            <div class="bar-fill bar-draw" id="barDraw" style="width: 24%;">
+                                <span>Hòa: 24%</span>
+                            </div>
+                            <div class="bar-fill bar-away" id="barAway" style="width: 28%;">
+                                <span>Man City: 28%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thông số phụ dự đoán -->
+                    <div class="prediction-factors-grid">
+                        <div class="factor-item">
+                            <span class="factor-name"><i class="fa-solid fa-futbol"></i> Cả hai đội cùng ghi bàn (BTTS)</span>
+                            <div class="factor-progress"><div class="factor-fill" style="width: 74%;">74% CÓ</div></div>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-name"><i class="fa-solid fa-arrow-trend-up"></i> Tổng số bàn thắng trên 2.5 bàn</span>
+                            <div class="factor-progress"><div class="factor-fill" style="width: 68%;">68% CÓ</div></div>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-name"><i class="fa-solid fa-stopwatch"></i> Bàn thắng được ghi trong hiệp 1</span>
+                            <div class="factor-progress"><div class="factor-fill" style="width: 82%;">82% CÓ</div></div>
+                        </div>
+                        <div class="factor-item">
+                            <span class="factor-name"><i class="fa-solid fa-file-lines"></i> Tỉ số chính xác có xác suất cao nhất</span>
+                            <div class="factor-highlight"><strong>2 - 1</strong> (Xác suất 19.8%)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bảng các trận đấu dự đoán khác -->
+                <div class="other-predictions" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="subsection-title"><i class="fa-solid fa-list-check"></i> Bảng Tỉ Lệ Phần Trăm Các Trận Đấu Tiếp Theo</h3>
+                    <div class="pred-table-wrap">
+                        <table class="pred-table">
+                            <thead>
+                                <tr>
+                                    <th>Thời Gian</th>
+                                    <th>Cặp Đấu</th>
+                                    <th>Đội Nhà Thắng %</th>
+                                    <th>Hòa %</th>
+                                    <th>Đội Khách Thắng %</th>
+                                    <th>Gợi Ý Dự Đoán</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><time datetime="2026-10-23T22:30:00">22:30 23/10</time></td>
+                                    <td><strong>Arsenal</strong> vs Chelsea</td>
+                                    <td><span class="badge-win">55%</span></td>
+                                    <td><span>23%</span></td>
+                                    <td><span>22%</span></td>
+                                    <td><span class="recommend-tag">Arsenal Thắng</span></td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2026-10-24T02:00:00">02:00 24/10</time></td>
+                                    <td><strong>Barcelona</strong> vs Atlético Madrid</td>
+                                    <td><span class="badge-win">48%</span></td>
+                                    <td><span>28%</span></td>
+                                    <td><span>24%</span></td>
+                                    <td><span class="recommend-tag">Barcelona Thắng</span></td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2026-10-24T20:30:00">20:30 24/10</time></td>
+                                    <td>Bayern Munich vs Dortmund</td>
+                                    <td><span class="badge-win">58%</span></td>
+                                    <td><span>21%</span></td>
+                                    <td><span>21%</span></td>
+                                    <td><span class="recommend-tag">Tài 2.5 Bàn</span></td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2026-10-25T19:15:00">19:15 25/10</time></td>
+                                    <td>Hà Nội FC vs Thể Công Viettel</td>
+                                    <td><span class="badge-win">41%</span></td>
+                                    <td><span class="badge-draw">33%</span></td>
+                                    <td><span>26%</span></td>
+                                    <td><span class="recommend-tag">Khả Năng Hòa Cao</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. SECTION: PLAYERS SHOWCASE (Thông Tin Cầu Thủ) ==================== -->
+        <section class="section-padding players-section" id="players">
+            <div class="container">
+                <div class="section-heading text-center" data-aos="fade-down">
+                    <span class="sub-badge"><i class="fa-solid fa-star"></i> THÔNG TIN CẦU THỦ</span>
+                    <h2 class="section-title">Ngôi Sao Sân Cỏ Xuất Sắc Nhất</h2>
+                    <p class="section-subtitle">Hồ sơ chi tiết, phong độ, chỉ số kỹ thuật và giá trị chuyển nhượng của các siêu sao thế giới</p>
+                    
+                    <!-- Search & Filter Controls -->
+                    <div class="player-controls">
+                        <div class="player-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="playerSearchInput" placeholder="Tìm kiếm tên cầu thủ, CLB, quốc gia..." aria-label="Tìm kiếm cầu thủ">
+                        </div>
+                        <div class="player-position-filters">
+                            <button class="pos-filter-btn active" data-pos="all">Tất Cả</button>
+                            <button class="pos-filter-btn" data-pos="FW">Tiền Đạo (FW)</button>
+                            <button class="pos-filter-btn" data-pos="MF">Tiền Vệ (MF)</button>
+                            <button class="pos-filter-btn" data-pos="DF">Hậu Vệ (DF)</button>
+                            <button class="pos-filter-btn" data-pos="GK">Thủ Môn (GK)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Players Grid -->
+                <div class="players-grid" id="playersContainer">
+                    <!-- Cầu thủ 1: Vinícius Júnior -->
+                    <article class="player-card" data-pos="FW" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500&auto=format&fit=crop&q=80" alt="Vinícius Júnior" class="player-photo">
+                            <span class="player-number">#7</span>
+                            <span class="player-pos-badge fw">FW</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> Real Madrid</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Brazil</span>
+                            </div>
+                            <h3 class="player-name">Vinícius Júnior</h3>
+                            <p class="player-role">Tiền Đạo Cánh Trái • 25 Tuổi</p>
+
+                            <!-- Chỉ số cơ bản -->
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Tốc độ</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 95%;"></div></div>
+                                    <span class="stat-val">95</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Dứt điểm</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 89%;"></div></div>
+                                    <span class="stat-val">89</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Rê bóng</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 94%;"></div></div>
+                                    <span class="stat-val">94</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>24</strong>
+                                    <span>Bàn thắng</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>14</strong>
+                                    <span>Kiến tạo</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€180M</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="1">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Cầu thủ 2: Erling Haaland -->
+                    <article class="player-card" data-pos="FW" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=500&auto=format&fit=crop&q=80" alt="Erling Haaland" class="player-photo">
+                            <span class="player-number">#9</span>
+                            <span class="player-pos-badge fw">FW</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> Manchester City</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Na Uy</span>
+                            </div>
+                            <h3 class="player-name">Erling Haaland</h3>
+                            <p class="player-role">Tiền Đạo Cắm • 25 Tuổi</p>
+
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Tốc độ</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 90%;"></div></div>
+                                    <span class="stat-val">90</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Dứt điểm</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 97%;"></div></div>
+                                    <span class="stat-val">97</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Thể lực</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 93%;"></div></div>
+                                    <span class="stat-val">93</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>32</strong>
+                                    <span>Bàn thắng</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>6</strong>
+                                    <span>Kiến tạo</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€180M</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="2">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Cầu thủ 3: Jude Bellingham -->
+                    <article class="player-card" data-pos="MF" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=500&auto=format&fit=crop&q=80" alt="Jude Bellingham" class="player-photo">
+                            <span class="player-number">#5</span>
+                            <span class="player-pos-badge mf">MF</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> Real Madrid</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Anh</span>
+                            </div>
+                            <h3 class="player-name">Jude Bellingham</h3>
+                            <p class="player-role">Tiền Vệ Tấn Công • 22 Tuổi</p>
+
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Chuyền bóng</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 91%;"></div></div>
+                                    <span class="stat-val">91</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Dứt điểm</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 88%;"></div></div>
+                                    <span class="stat-val">88</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Tranh chấp</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 86%;"></div></div>
+                                    <span class="stat-val">86</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>18</strong>
+                                    <span>Bàn thắng</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>11</strong>
+                                    <span>Kiến tạo</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€180M</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="3">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Cầu thủ 4: William Saliba -->
+                    <article class="player-card" data-pos="DF" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=80" alt="William Saliba" class="player-photo">
+                            <span class="player-number">#2</span>
+                            <span class="player-pos-badge df">DF</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> Arsenal</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Pháp</span>
+                            </div>
+                            <h3 class="player-name">William Saliba</h3>
+                            <p class="player-role">Trung Vệ Thép • 24 Tuổi</p>
+
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Phòng ngự</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 93%;"></div></div>
+                                    <span class="stat-val">93</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Tốc độ</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 86%;"></div></div>
+                                    <span class="stat-val">86</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Không chiến</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 89%;"></div></div>
+                                    <span class="stat-val">89</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>18</strong>
+                                    <span>Sạch lưới</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>89%</strong>
+                                    <span>Tắc bóng</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€85M</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="4">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Cầu thủ 5: Thibaut Courtois -->
+                    <article class="player-card" data-pos="GK" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=500&auto=format&fit=crop&q=80" alt="Thibaut Courtois" class="player-photo">
+                            <span class="player-number">#1</span>
+                            <span class="player-pos-badge gk">GK</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> Real Madrid</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Bỉ</span>
+                            </div>
+                            <h3 class="player-name">Thibaut Courtois</h3>
+                            <p class="player-role">Thủ Môn Xuất Sắc • 33 Tuổi</p>
+
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Phản xạ</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 94%;"></div></div>
+                                    <span class="stat-val">94</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Bắt bóng</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 90%;"></div></div>
+                                    <span class="stat-val">90</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Chọn vị trí</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 92%;"></div></div>
+                                    <span class="stat-val">92</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>15</strong>
+                                    <span>Trận sạch lưới</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>84%</strong>
+                                    <span>Cản phá</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€30M</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="5">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Cầu thủ 6: Nguyễn Quang Hải -->
+                    <article class="player-card" data-pos="MF" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="player-card-media">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&auto=format&fit=crop&q=80" alt="Nguyễn Quang Hải" class="player-photo">
+                            <span class="player-number">#19</span>
+                            <span class="player-pos-badge mf">MF</span>
+                        </div>
+                        <div class="player-card-content">
+                            <div class="player-club-row">
+                                <span class="player-club"><i class="fa-solid fa-shield-halved"></i> CAHN FC</span>
+                                <span class="player-country"><i class="fa-solid fa-flag"></i> Việt Nam</span>
+                            </div>
+                            <h3 class="player-name">Nguyễn Quang Hải</h3>
+                            <p class="player-role">Tiền Vệ Kiến Thiết • 28 Tuổi</p>
+
+                            <div class="player-radar-summary">
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Đá phạt</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 91%;"></div></div>
+                                    <span class="stat-val">91</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Chuyền bóng</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 86%;"></div></div>
+                                    <span class="stat-val">86</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-lbl">Tầm nhìn</span>
+                                    <div class="stat-bar-outer"><div class="stat-bar-inner" style="width: 88%;"></div></div>
+                                    <span class="stat-val">88</span>
+                                </div>
+                            </div>
+
+                            <div class="player-season-stats">
+                                <div class="season-stat-item">
+                                    <strong>9</strong>
+                                    <span>Bàn thắng</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>8</strong>
+                                    <span>Kiến tạo</span>
+                                </div>
+                                <div class="season-stat-item">
+                                    <strong>€400K</strong>
+                                    <span>Định giá</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-full open-modal-btn" data-player-id="6">
+                                <i class="fa-solid fa-eye"></i> Xem Chi Tiết Hồ Sơ
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. SECTION: NEWS & ARTICLES (Bổ sung Semantic Article) ==================== -->
+        <section class="section-padding news-section" id="news">
+            <div class="container">
+                <div class="section-heading text-center" data-aos="fade-down">
+                    <span class="sub-badge"><i class="fa-solid fa-newspaper"></i> TIN NÓNG BÓNG ĐÁ</span>
+                    <h2 class="section-title">Nhận Định & Tiêu Điểm Báo Giới</h2>
+                    <p class="section-subtitle">Góc nhìn chuyên môn trước thềm các vòng đấu sinh tử</p>
+                </div>
+
+                <div class="news-grid">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                        <figure class="news-img-box">
+                            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&auto=format&fit=crop&q=80" alt="Phân tích Real vs City" class="news-img">
+                            <span class="news-category">Nhận Định Chiến Thuật</span>
+                        </figure>
+                        <div class="news-info">
+                            <time class="news-date" datetime="2026-10-20"><i class="fa-regular fa-clock"></i> 20/10/2026</time>
+                            <h3 class="news-title">Điểm nghẽn tuyến giữa: Ai sẽ chế ngự được cỗ máy kiểm soát của Man City?</h3>
+                            <p class="news-excerpt">Phân tích tương quan giữa khả năng chuyển trạng thái siêu tốc độ của Real Madrid và lối chơi định vị của Pep Guardiola...</p>
+                            <a href="#predictions" class="read-more-link">Xem phân tích tỉ lệ <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <figure class="news-img-box">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&auto=format&fit=crop&q=80" alt="Derby London" class="news-img">
+                            <span class="news-category">Tin Nóng Ngoại Hạng</span>
+                        </figure>
+                        <div class="news-info">
+                            <time class="news-date" datetime="2026-10-19"><i class="fa-regular fa-clock"></i> 19/10/2026</time>
+                            <h3 class="news-title">Đại chiến Emirates: Hàng thủ chắc chắn nhất giải đấu đối đầu sức trẻ Chelsea</h3>
+                            <p class="news-excerpt">Mikel Arteta đang sở hữu cặp trung vệ có phong độ cao nhất châu Âu thời điểm hiện tại khi mới chỉ để thủng lưới 5 bàn...</p>
+                            <a href="#predictions" class="read-more-link">Xem phân tích tỉ lệ <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="300">
+                        <figure class="news-img-box">
+                            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=600&auto=format&fit=crop&q=80" alt="Trí tuệ nhân tạo bóng đá" class="news-img">
+                            <span class="news-category">Công Nghệ Thể Thao</span>
+                        </figure>
+                        <div class="news-info">
+                            <time class="news-date" datetime="2026-10-18"><i class="fa-regular fa-clock"></i> 18/10/2026</time>
+                            <h3 class="news-title">Mô hình AI dự đoán bóng đá hoạt động ra sao và vì sao độ chuẩn xác lại cao?</h3>
+                            <p class="news-excerpt">Khám phá cách mạng dữ liệu lớn kết hợp các chỉ số Expected Goals (xG), Expected Assists (xA) và bản đồ nhiệt cầu thủ...</p>
+                            <a href="#predictions" class="read-more-link">Xem phân tích tỉ lệ <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <aside class="newsletter-cta" data-aos="zoom-in">
+            <div class="container cta-container">
+                <div class="cta-text">
+                    <h3><i class="fa-solid fa-bell"></i> Đăng Ký Nhận Dự Đoán Sớm & Tin Trận Đấu VIP</h3>
+                    <p>Nhận thông báo tỉ lệ phần trăm chiến thắng và đội hình chính thức trước giờ bóng lăn 1 tiếng.</p>
+                </div>
+                <form class="cta-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận thông báo tỉ lệ trận đấu VIP!');">
+                    <input type="email" placeholder="Nhập địa chỉ email của bạn..." required aria-label="Nhập email">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Đăng Ký
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- ==================== 8. FOOTER (Chuẩn Semantic HTML5) ==================== -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-futbol"></i></div>
+                    <div class="logo-text">
+                        <span class="brand-title">KICKOFF</span>
+                        <span class="brand-sub">ARENA</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Trang tin tức bóng đá toàn diện, cập nhật lịch thi đấu trực tiếp, hồ sơ chỉ số cầu thủ và thuật toán dự đoán kết quả chuyên sâu hàng đầu Việt Nam.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="social-btn" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Giải Đấu Hàng Đầu</h4>
+                <ul class="footer-links">
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> UEFA Champions League</a></li>
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> Ngoại Hạng Anh (EPL)</a></li>
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> Giải La Liga Tây Ban Nha</a></li>
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> Giải V-League Việt Nam</a></li>
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> FIFA World Cup 2026</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Tính Năng Chính</h4>
+                <ul class="footer-links">
+                    <li><a href="#matches"><i class="fa-solid fa-angle-right"></i> Lịch thi đấu theo giờ VN</a></li>
+                    <li><a href="#predictions"><i class="fa-solid fa-angle-right"></i> Dự đoán kết quả theo %</a></li>
+                    <li><a href="#players"><i class="fa-solid fa-angle-right"></i> Tra cứu chỉ số cầu thủ</a></li>
+                    <li><a href="#news"><i class="fa-solid fa-angle-right"></i> Nhận định chuyên gia</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> So sánh phong độ 2 đội</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Liên Hệ & Bản Quyền</h4>
+                <div class="footer-contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Tòa nhà Landmark, Ba Đình, Hà Nội</p>
+                    <p><i class="fa-solid fa-phone"></i> Hotline: 1900 888 999</p>
+                    <p><i class="fa-solid fa-envelope"></i> Email: contact@kickoffarena.vn</p>
+                    <p><i class="fa-solid fa-shield-halved"></i> Giấy phép xuất bản số 125/GP-BTTTT</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright">&copy; 2026 KickOff Arena. All rights reserved. Thiết kế chuẩn Semantic HTML5, CSS Variables, Flexbox & Grid.</p>
+                <div class="footer-legal">
+                    <a href="#">Điều khoản sử dụng</a>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Liên hệ hợp tác</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL: THÔNG TIN CHI TIẾT CẦU THỦ ==================== -->
+    <div class="player-modal" id="playerModal" aria-hidden="true" role="dialog">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-dialog">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Đóng cửa sổ">&times;</button>
+            <div class="modal-content" id="modalContent">
+                <!-- Nội dung modal được cập nhật động bằng JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Quick Theme Switcher Button -->
+    <button class="theme-floating-btn" id="floatingThemeBtn" aria-label="Đổi màu giao diện" title="Đổi màu sắc trang web">
+        <i class="fa-solid fa-palette"></i>
+        <span class="floating-tooltip">Đổi màu</span>
+    </button>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== BẢNG MÀU ĐỔI MÀU GIAO DIỆN (THEME COLOR SWITCHER) ==================== -->
+    <div class="theme-panel-wrapper" id="themePanelWrapper" aria-hidden="true" role="dialog" aria-labelledby="themeTitle">
+        <div class="theme-panel-backdrop" id="themeBackdrop"></div>
+        <div class="theme-panel" id="themePanel">
+            <div class="theme-panel-header">
+                <div class="theme-panel-title" id="themeTitle">
+                    <div class="theme-icon-box"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h3>Bảng Màu Giao Diện</h3>
+                        <span class="theme-subtitle">Tùy biến phong cách thể thao theo ý bạn</span>
+                    </div>
+                </div>
+                <button class="theme-panel-close" id="themeCloseBtn" aria-label="Đóng bảng màu">&times;</button>
+            </div>
+
+            <div class="theme-panel-body">
+                <!-- 6 Preset Colors -->
+                <div class="theme-section-label">
+                    <i class="fa-solid fa-swatchbook"></i> Chọn Tông Màu Chủ Đạo (Presets)
+                </div>
+                <div class="theme-colors-grid" id="themeColorsGrid">
+                    <!-- Preset 1: Green -->
+                    <button class="color-swatch active" data-theme="green" data-color="#00f59b" data-hover="#00d685" data-name="Xanh Sân Cỏ">
+                        <span class="swatch-circle" style="background: #00f59b; box-shadow: 0 0 10px rgba(0, 245, 155, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Xanh Sân Cỏ</span>
+                            <span class="swatch-sub">Neon Pitch (Gốc)</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+
+                    <!-- Preset 2: Blue -->
+                    <button class="color-swatch" data-theme="blue" data-color="#00d2ff" data-hover="#00b4d8" data-name="Xanh Cúp C1">
+                        <span class="swatch-circle" style="background: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Xanh Cúp C1</span>
+                            <span class="swatch-sub">UCL Electric Blue</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+
+                    <!-- Preset 3: Red -->
+                    <button class="color-swatch" data-theme="red" data-color="#ff3366" data-hover="#e62050" data-name="Quỷ Đỏ Rực Lửa">
+                        <span class="swatch-circle" style="background: #ff3366; box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Quỷ Đỏ Rực Lửa</span>
+                            <span class="swatch-sub">Crimson Fire / MU</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+
+                    <!-- Preset 4: Gold -->
+                    <button class="color-swatch" data-theme="gold" data-color="#ffb703" data-hover="#e09f00" data-name="Cúp Vàng Danh Giá">
+                        <span class="swatch-circle" style="background: #ffb703; box-shadow: 0 0 10px rgba(255, 183, 3, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Cúp Vàng Danh Giá</span>
+                            <span class="swatch-sub">Golden Trophy</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+
+                    <!-- Preset 5: Purple -->
+                    <button class="color-swatch" data-theme="purple" data-color="#a855f7" data-hover="#9333ea" data-name="Tím Cyber Stadium">
+                        <span class="swatch-circle" style="background: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Tím Cyber</span>
+                            <span class="swatch-sub">Violet Stadium</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+
+                    <!-- Preset 6: Orange -->
+                    <button class="color-swatch" data-theme="orange" data-color="#ff7849" data-hover="#ff5722" data-name="Cơn Lốc Da Cam">
+                        <span class="swatch-circle" style="background: #ff7849; box-shadow: 0 0 10px rgba(255, 120, 73, 0.5);"></span>
+                        <div class="swatch-info">
+                            <span class="swatch-name">Cơn Lốc Da Cam</span>
+                            <span class="swatch-sub">Electric Orange</span>
+                        </div>
+                        <i class="fa-solid fa-check swatch-check"></i>
+                    </button>
+                </div>
+
+                <!-- Custom Color Picker -->
+                <div class="theme-custom-box">
+                    <div class="custom-color-header">
+                        <span class="custom-label"><i class="fa-solid fa-eye-dropper"></i> Tự Chọn Mã Màu Riêng</span>
+                        <span class="custom-hex-code" id="customHexDisplay">#00F59B</span>
+                    </div>
+                    <div class="custom-color-control">
+                        <input type="color" id="customColorInput" value="#00f59b" aria-label="Tùy chọn mã màu cá nhân">
+                        <div class="custom-tip-text">
+                            <strong>Thỏa sức sáng tạo:</strong> Bấm ô màu để pha chế hàng triệu sắc thái màu độc quyền cho web của bạn.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark / Light Stadium Mode Toggle -->
+                <div class="theme-mode-section">
+                    <div class="theme-section-label">
+                        <i class="fa-solid fa-circle-half-stroke"></i> Chế Độ Sáng / Tối
+                    </div>
+                    <div class="mode-toggle-buttons">
+                        <button class="mode-btn active" data-mode="dark" id="btnDarkMode">
+                            <i class="fa-solid fa-moon"></i> Đêm Sân Vận Động
+                        </button>
+                        <button class="mode-btn" data-mode="light" id="btnLightMode">
+                            <i class="fa-solid fa-sun"></i> Sân Ban Ngày (Sáng)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Theme Notice -->
+                <div class="theme-active-notice" id="themeActiveNotice">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Đang áp dụng: <strong id="currentThemeName">Xanh Sân Cỏ (Neon Pitch)</strong>
+                </div>
+            </div>
+
+            <div class="theme-panel-footer">
+                <button class="btn btn-sm btn-outline btn-full" id="resetThemeBtn">
+                    <i class="fa-solid fa-rotate-left"></i> Khôi Phục Mặc Định
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS (Animate On Scroll) JS (Yêu cầu đề bài) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Main JavaScript -->
+    <!-- Main JavaScript (Hỗ trợ tải main.js ở cả thư mục gốc và thư mục js/) -->
+    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
